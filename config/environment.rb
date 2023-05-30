@@ -1,4 +1,22 @@
-# Require statements should go here.
+class Garden
+  def initialize(name)
+    @name = name
+    @plants = []
+  end
 
-# Then any files that need to load the files required here can
-# require THIS file, environment.rb, and get access to everything
+  def add_plant(plant)
+    @plants << plant
+  end
+
+  def plant_count
+    @plants.length
+  end
+end
+
+class Plant
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+end
